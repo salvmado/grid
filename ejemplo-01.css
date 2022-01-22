@@ -1,0 +1,96 @@
+.contenedor {
+    border: 5px solid #e1bee7;
+    background-color: #fff1ff;
+    /* Le decimos al contenedor que se comporte como un grid  */
+    display: grid;
+
+    /* Con estas propiedades nos permite decirle cuantas colunmas y filas tendrá  */
+    grid-template-columns: 100px 200px 300px;
+    
+    /* rows son filas  */
+    grid-template-rows: 150px 250px;
+
+    /* Define el tamaño que tendrá cualquier fila o columna  */
+    grid-auto-rows: 150px;
+    grid-auto-columns: 100px;
+
+    /* Modifico como se llena nuestro grid  */
+    /* Por ejemplo:
+    | 1 | 3 |
+    | 2 | 4 | */
+    grid-auto-flow: column;
+    
+    /* Es la separación entre filas y columnas  */
+    row-gap: 15px;
+    column-gap: 15px;
+    gap: 15px;
+
+
+    /* PROPIEDADES DE ALINEACIÓN DE LOS ITEMS */
+    /* Mueve el contenido de los items  */
+
+    /* Me ayuda a alinear de manera horizontal */
+    justify-items: ;
+
+    /* Alineación vertical  */
+    align-items: ;
+
+    /* Alineo de las dos formas: horizontal y vertical  */
+    place-items: ;
+
+    /* PROPIEDADES DE ALINEACIÓN DEL CONTENEDOR  */
+    /* Son para la grilla completa  */
+    /* Puedo mover todo el bloque por ejemplo para centrarlo en la página  */
+
+    /* horizontal  */
+    justify-content: ;
+
+    /* vertical  */
+    align-content: ;
+
+    /* horizontal y vertical  */
+    place-content: ;
+
+    /* PROPIEDADES DE ALINEACIÓN DEL ITEM  */
+    /* Me permite mover el contenido de un solo items  */
+
+    /* horizontal  */
+    justify-self: ;
+    
+    /* vertical  */
+    align-self: ;
+    
+    /* horizontal y vertical  */
+    place-self: ;
+
+
+    /* PROPIEDADES DE UBICACION  */
+
+    grid-column-start: ;
+    grid-column-end: ;
+    grid-column: valor inicial / valor final ;
+
+    grid-row-start: ;
+    grid-row-end: ;
+    grid-row: valor inicial / valor final;
+
+    /* le damos nombre a los espacios de la grilla  */
+    /* Se le dan los cuatro valores a la vez */
+    grid-area: comienza row / comienza column / termina row / termina column;
+
+    /* Este se declara dentro de nuestro contenedor  */
+    grid-template-areas: 
+        "header header header"
+        "side main main"
+        "side main main";
+
+    /* Ahora en cada item respectivamente  */
+    grid-area: header;
+    grid-area: side;
+    grid-area: main;
+}
+
+.item {
+    border: 5px solid #00bcd4;
+    font-size: 4rem;
+}
