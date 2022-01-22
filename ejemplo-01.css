@@ -90,6 +90,50 @@
     grid-area: main;
 }
 
+/* FUNCIONES ESPECIALES */ 
+
+/* Nos ayuda a declarar un tamaño mínimo y máximo para ancho o alto de una celda. */
+/* ejemplo de 3 columnas:  */
+grid-template-columns: minmax(30px, 300px) 200px minmax(60px, 250px);
+
+/* Podemos escribir en una sola declaración, 
+que las columnas medirán lo mismo varias veces  */
+/* ejemplo de 3 filas que miden lo mismo, bueno en este caso para que se ajusten al contenido */
+grid-template-rows: repeat(3, auto);
+
+
+/* KEYWORDS ESPECIALES  */
+
+fr
+/* un fr es una fracción de la grilla  */
+/* ejemplo de 4 columnas */ 
+grid-template-columns: 1fr 3fr 1fr 2fr;
+
+min-content 
+/* ajusta el ancho de la celda, para tener la columna lo más fina que se pueda */
+/* ejemplo: la tercer columna se pone al tamáño mínimo donde pueda entrar el contenido  */
+grid-template-columns: 1fr 3fr min-content 2fr;
+
+max-content 
+/* hace ancha la columna o crece la fila para que el contenido se vea más grande */
+/* ejemplo: hace la columna 3 más ancha  */
+grid-template-columns: 1fr 3fr max-content 2fr;
+
+auto-fill 
+/* agrega columnas fantasmas que rellenan el espacio */ 
+/* Al hacer más chicha la pantalla, las columnas se van pasando hacia abajo  */
+grid-template-columns: repeat(auto-fill minmax(100px, 1fr));
+
+auto-fit
+/* hace que nuestra grilla ocupe el 100% de espacio que tiene para rellernar todo   */
+/* ejemplo, nuestro contenedor hace que las columnas se expanden hasta el 100%  */
+/* Al hacer más chicha la pantalla, las columnas se van pasando hacia abajo  */
+grid-template-columns: repeat(auto-fit minmax(100px, 1fr));
+
+
+
+
+
 .item {
     border: 5px solid #00bcd4;
     font-size: 4rem;
